@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Ibnox| User Profile</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" type="image/x-icon" href="Icons/Logo.jpg">
+    <!--<meta http-equiv="refresh" content="10">-->
+	<!--[if lt IE 9]>
+	  <!--<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>-->
+	<![endif]-->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>-->
+    <script src="script.js"></script>
+    <script src="profile_page_scripts.js"></script>
+	<link rel="stylesheet" href="styles.css" type="text/css" media="all">
+    <link rel="stylesheet" href="styles_navbar.css" type="text/css" media="all">
+    <link rel="stylesheet" href="profile_page.css" type="text/css" media="all">
+</head>
+    
+<body>
+    
+    <!--NAVIGATION BAR STARTS-->
+    <header class="navbar">
+        <div class="navbar_content">
+            <div class="navbar_content_left1">
+                <img class="logo" src="Icons/Logo_25px.jpg">
+                <div class="searchbar" tabindex="0">
+                    <input class="searchbar_term1" autocomplete="off" value type="text" placeholder="Search Ibnox" title="Search"/>
+                </div>
+                <div class="navbar_buttons">
+                    <ul class="navbar_buttons_list">
+                        <li class="navbar_button_StartWriting"><a class="navbar_button_link" href="#">Start Writing</a></li>
+                        <li class="navbar_button_Draft"><a class="navbar_button_link" href="#">Drafts</a></li>
+                    </ul>
+                </div>
+            </div>
+        <div class="dropdown_container">
+            <div class="navbar_right_icons">
+                <div class= "message_full">
+                    <img class="message_icon" src="Icons/message_icon_25by27.jpg" onclick="toggleDivMessageDropdown()">
+                </div>
+                <div class="notification_full">
+                    <img class="notification_icon" src="Icons/notification_icon_25by24.jpg" onclick="toggleDivNotificationDropdown()">
+                </div>
+                <div class="profile_link">
+                    <img class="profile_icon" id="image3" src="Icons/profile_icon_temp_37by25.jpg" onclick="toggleDivUserMenu()">
+                    <img class="profile_arrow" src="Icons/arrow_icon_6by4px.jpg" onclick="toggleDivUserMenu()">
+                </div>
+            </div>
+            
+            <!--USER DROPDOWN MENU STARTS-->
+            
+            <div class="user_menu" id="menu_user" style="display: none;">
+                    <div class="user_menu_header">
+                        <div class="user_menu_profile_pic"></div>
+                        <div class="user_menu_name">Name of Writer</div>
+                    </div>
+                    <div class="user_menu_body">
+                        <div class="user_menu_body_line1">
+                        <a href="#"><div class="user_menu_option_Published"></div></a>
+                        <a href="#"><div class="user_menu_option_Drafts"></div></a>
+                        </div>
+                        <br>
+                        <div class="user_menu_body_line2">
+                        <a href="#"><div class="user_menu_option_Analytics"></div></a>
+                        <a href="#"><div class="user_menu_option_Settings"></div></a>
+                        </div>
+                    </div>
+                    <div class="user_menu_footer">
+                        <div class="user_menu_footer_line1">
+                            <ul class="user_menu_footer_links">
+                                <li class="user_menu_footer_link_single"><a href="#">Logout</a></li>
+                                <li class="user_menu_footer_link_single"><a href="#">Contact Us</a></li>
+                                <li class="user_menu_footer_link_single"><a href="#">Career</a></li>
+                                <li class="user_menu_footer_link_single"><a href="#">Guidelines</a></li>
+                                <li class="user_menu_footer_link_single"><a href="#">Privacy</a></li>
+                            </ul>
+                        </div>
+                        <div class="user_menu_footer_line2">
+                            <ul class="user_menu_footer_links">
+                                <li class="user_menu_footer_link_single"><a href="#">About</a></li>
+                                <li class="user_menu_footer_link_single"><a href="#">Report A Bug</a></li>
+                                <li class="user_menu_footer_link_single"><a href="#">Terms Of Use</a></li>
+                                <li class="user_menu_footer_link_single"><a href="#">Disclosure</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--USER DROPDOWN MENU ENDS-->
+            
+                <!--MESSAGE DROPDOWN MENU STARTS-->
+                <div class="message_dropdown" id="dropdown_message" style="display: none;">
+                    
+                        <div class="message_dropdown_before" id="message_flip_state1">
+                        <div class="message_dropdown_header">
+                        <div class="message_dropdown_header_title">Messages</div>
+                        <div class="message_dropdown_header_searchbar">
+                            <input class="searchbar_term_author" autocomplete="off" value type="text" placeholder="Search Author" title="Search"/>
+                        </div>
+                        <!--<div class="message_dropdown_header_searchbar_onclick">
+                            <input class="searchbar_term_author_onclick" autocomplete="off" value type="text" placeholder="Search Author" title="Search"/>
+                        </div>-->
+                    </div>
+                    <div class="message_dropdown_body">
+                        <div class="message_dropdown_notif1" onclick="messageFlip()">
+                            <div class="message_dropdown_profile_pic"></div>
+                            <div class="message_dropdown_name">Neel Shah</div>
+                            <!--<div class="message_dropdown_author_tag">Author</div>-->
+                            <div class="message_dropdown_notification_quantity">1</div>
+                        </div>
+                        <div class="message_dropdown_notif1" onclick="messageFlip()">
+                            <div class="message_dropdown_profile_pic"></div>
+                            <div class="message_dropdown_name">Neel Shah</div>
+                            <!--<div class="message_dropdown_author_tag">Author</div>-->
+                            <div class="message_dropdown_notification_quantity">1</div>
+                        </div>
+                        <div class="message_dropdown_notif1" onclick="messageFlip()">
+                            <div class="message_dropdown_profile_pic"></div>
+                            <div class="message_dropdown_name">Neel Shah</div>
+                            <!--<div class="message_dropdown_author_tag">Author</div>-->
+                            <div class="message_dropdown_notification_quantity">1</div>
+                        </div>
+                        
+                        <!--<div class="message_dropdown_notif2" onclick="messageFlip()">-->
+                            <!--<div class="message_dropdown_profile_pic"></div>-->
+                            <!--<div class="message_dropdown_name">Neel Shah</div>-->
+                            <!--<div class="message_dropdown_unread">2</div>-->
+                        <!--</div>-->
+                        <!--<div class="message_dropdown_notif2" onclick="messageFlip()">-->
+                            <!--<div class="message_dropdown_profile_pic"></div>-->
+                            <!--<div class="message_dropdown_name">Neel Shah</div>-->
+                            <!--<div class="message_dropdown_unread">2</div>-->
+                        <!--</div>-->
+                        <!--<div class="message_dropdown_notif1" onclick="messageFlip()">-->
+                            <!--<div class="message_dropdown_profile_pic"></div>-->
+                            <!--<div class="message_dropdown_name">Neel Shah</div>-->
+                            <!--<div class="message_dropdown_author_tag">Author</div>-->
+                        <!--</div>-->
+                    </div>
+                    </div>
+                    <div class="message_dropdown_after" id="message_flip_state2">
+                        <div class="message_dropdown_after_header">
+                            <img class="message_dropdown_after_header_arrow" src="Icons/Arrow_left_icon_21by14px.jpg" onclick="messageFlipBack()">
+                            <div class="message_dropdown_after_title">Name</div>
+                        </div>
+                        <div class="message_dropdown_after_body">
+                            <ul class="text_messages_list">
+                            <li class="text_line_left"><div class="message_dropdown_text_other_top">Phasellus luctus bibendum tristique.</div></li>
+                            <li class="text_line_left"><div class="message_dropdown_text_other_middle">Blah</div></li>
+                            <li class="text_line_left"><div class="message_dropdown_text_other_bottom">Blah blah blah </div></li>
+                            <li class="text_line_right"><div class="message_dropdown_text_me_top">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div></li>
+                            <li class="text_line_right"><div class="message_dropdown_text_me_middle">Blah</div></li>
+                            <li class="text_line_right"><div class="message_dropdown_text_me_bottom">Blah blah blah</div></li>
+                            </ul>
+                        </div>
+                        <div class="message_dropdown_after_footer">
+                            <textarea class="message_dropdown_after_type" autocomplete="off" value type="text" placeholder="Enter your message" title="Search"></textarea>
+                            <div class="message_dropdown_after_footer_bottom">
+                                <div class="message_dropdown_send_button">Send</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--MESSAGE DROPDOWN MENU ENDS-->
+            
+                <!--NOTIFICATION DROPDOWN MENU STARTS-->
+                <div class="notification_dropdown" id="dropdown_notification" style="display: none;">
+                    <div class="notification_dropdown_header">Notifications</div>
+                    <div class="notification_dropdown_body">
+                        <div class="notification_dropdown_notif">
+                            <div class="notification_dropdown_notif_pic"></div>
+                            <div class="notification_dropdown_notif_content">Phasellus luctus bibendum tristique. Phasellus luctus bibendum tristique. Phasellus luctus bibendum tristique.</div>
+                            <div class="notification_dropdown_notif_time">2 mins ago</div>
+                        </div>
+                        <div class="notification_dropdown_notif">
+                            <div class="notification_dropdown_notif_pic"></div>
+                            <div class="notification_dropdown_notif_content">Blah blah blah blah blah blah blah blah blah</div>
+                            <div class="notification_dropdown_notif_time">2 mins ago</div>
+                        </div>
+                        <div class="notification_dropdown_notif">
+                            <div class="notification_dropdown_notif_pic"></div>
+                            <div class="notification_dropdown_notif_content">Blah blah blah blah blah blah blah blah blah</div>
+                            <div class="notification_dropdown_notif_time">2 mins ago</div>
+                        </div>
+                        <div class="notification_dropdown_notif">
+                            <div class="notification_dropdown_notif_pic"></div>
+                            <div class="notification_dropdown_notif_content">Blah blah blah blah blah blah blah blah blah</div>
+                            <div class="notification_dropdown_notif_time">2 mins ago</div>
+                        </div>
+                        <div class="notification_dropdown_notif">
+                            <div class="notification_dropdown_notif_pic"></div>
+                            <div class="notification_dropdown_notif_content">Blah blah blah blah blah blah blah blah blah</div>
+                            <div class="notification_dropdown_notif_time">2 mins ago</div>
+                        </div>
+                        <div class="notification_dropdown_notif">
+                            <div class="notification_dropdown_notif_pic"></div>
+                            <div class="notification_dropdown_notif_content">Blah blah blah blah blah blah blah blah blah</div>
+                            <div class="notification_dropdown_notif_time">2 mins ago</div>
+                        </div>
+                    </div>
+                </div>
+                <!--NOTIFICATION DROPDOWN MENU ENDS-->
+            </div>
+        </div>
+    </header>
+    <!--NAVIGATION BAR ENDS-->
+    
+    
+    <!--REST OF BODY STARTS-->
+    
+    <div class="rest_of_body" onclick="restOfBody()">
+        
+        <div class="body_content_main">
+            
+            <div class="column_left">
+                
+                <!--USER PROFILE INFO DIV STARTS-->
+                
+                
+                <div class="profile_info">
+                    <div class="profile_info_pic"></div>
+                    <div class="profile_info_edit_profile"><strong><a href="">Edit Profile</a></strong></div>
+                    <div class="profile_info_name">Name of the Person</div>
+                    <div class="profile_info_stats">
+                        <div class="profile_info_stats_subscribers">
+                            <div class="profile_info_stats_subscribers_number">0</div>
+                            <div class="profile_info_stats_subscribers_text">Subscribers</div>
+                        </div>
+                        <div class="profile_info_stats_content">
+                            <div class="profile_info_stats_content_number">0</div>
+                            <div class="profile_info_stats_content_text">Content</div>
+                        </div>
+                        <div class="profile_info_stats_subscribed">
+                            <div class="profile_info_stats_subscribed_number">0</div>
+                            <div class="profile_info_stats_subscribed_text">Subscribed</div>
+                        </div>
+                    </div>
+                    <div class="profile_info_bio">Dolor sit amet, movet vocibus mediocritatem mei no, vis debet insolens no, at.</div>
+                    <div class="profile_info_footer">
+                        <a href=""><div class="profile_info_footer_facebook"></div></a>
+                        <a href=""><div class="profile_info_footer_twitter"></div></a>
+                        <a href=""><div class="profile_info_footer_googleplus"></div></a>
+                    </div>
+                </div>
+                
+                
+                <!--USER PROFILE INFO DIV ENDS-->
+                
+            </div>
+            
+            
+            <div class="column_right">
+                <div class="column_right_container">
+                    
+                    <!--OPTIONS NAVBAR STARTS-->
+                    
+                    <div class="column_container_options">
+                        <div class="column_container_options_published" onclick="publishedOptionClick()">Published</div>
+                        <div class="column_container_options_liked" onclick="likedOptionClick()">Liked</div>
+                        <div class="column_container_options_shared" onclick="sharedOptionClick()">Shared</div>
+                        <div class="column_container_options_highlights" onclick="highlightsOptionClick()">Highlights</div>
+                        <div class="column_container_options_questions" onclick="questionsOptionClick()">Questions</div>
+                        <div class="column_container_options_answers" onclick="answersOptionClick()">Answers</div>
+                        <div class="column_container_options_discussions" onclick="discussionsOptionClick()">Discussions</div>
+                    </div>
+                    
+                    <!--OPTIONS NAVBAR ENDS-->
+                    
+                    <!--ARTICLE SECTION STARTS-->
+                    
+                    <div class="column_right_container_article" style="display:block;">
+                        <div class="articles">
+                            <div class="article_container_main">
+                                <div class="article_container_main_header">
+                                    <div class="article_container_main_title"><h1>Lorem ipsum dolor sit amet.</h1></div>
+                                    <div class="article_container_main_details">
+                                        <div class="article_container_main_profile_pic"></div>
+                                        <div class="article_container_main_writer_name"><a href="#">Writer's name</a></div>
+                                        <div class="article_container_main_read_time">Read Time: 2 mins</div>
+                                        <div class="article_container_main_last_updated">Last updated: 2 days ago</div>
+                                    </div>
+                                </div>
+                                <div class="article_container_main_body">
+                                    <div class="article_container_main_body_image"></div>
+                                    <div class="article_container_main_body_content">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus luctus bibendum tristique. Donec vestibulum vitae turpis vel egestas. Integer commodo, nulla id sollicitudin posuere, sapien dui pretium tortor, vel blandit dolor orci sed dolor. Nunc dolor nisi, pharetra at consequat at, hendrerit at tellus...
+                                        <span class="article_container_main_lead_more"><a href="">Load More...</a></span></p>
+                                    </div>
+                                    <div class="article_container_main_footer">
+                                        <a href="#"><div class="article_container_main_footer_facebook"></div></a>
+                                        <a href="#"><div class="article_container_main_footer_twitter"></div></a>
+                                        <a href="#"><div class="article_container_main_footer_googleplus"></div></a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="article_container_main">
+                                <div class="article_container_main_header">
+                                    <div class="article_container_main_title"><h1>Lorem ipsum dolor sit amet.</h1></div>
+                                    <div class="article_container_main_details">
+                                        <div class="article_container_main_profile_pic"></div>
+                                        <div class="article_container_main_writer_name"><a href="#">Writer's name</a></div>
+                                        <div class="article_container_main_read_time">Read Time: 2 mins</div>
+                                        <div class="article_container_main_last_updated">Last updated: 2 days ago</div>
+                                    </div>
+                                </div>
+                                <div class="article_container_main_body">
+                                    <div class="article_container_main_body_image"></div>
+                                    <div class="article_container_main_body_content">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus luctus bibendum tristique. Donec vestibulum vitae turpis vel egestas. Integer commodo, nulla id sollicitudin posuere, sapien dui pretium tortor, vel blandit dolor orci sed dolor. Nunc dolor nisi, pharetra at consequat at, hendrerit at tellus...
+                                        <span class="article_container_main_lead_more"><a href="">Load More...</a></span></p>
+                                    </div>
+                                    <div class="article_container_main_footer">
+                                        <a href="#"><div class="article_container_main_footer_facebook"></div></a>
+                                        <a href="#"><div class="article_container_main_footer_twitter"></div></a>
+                                        <a href="#"><div class="article_container_main_footer_googleplus"></div></a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="article_container_main">
+                                <div class="article_container_main_header">
+                                    <div class="article_container_main_title"><h1>Lorem ipsum dolor sit amet.</h1></div>
+                                    <div class="article_container_main_details">
+                                        <div class="article_container_main_profile_pic"></div>
+                                        <div class="article_container_main_writer_name"><a href="#">Writer's name</a></div>
+                                        <div class="article_container_main_read_time">Read Time: 2 mins</div>
+                                        <div class="article_container_main_last_updated">Last updated: 2 days ago</div>
+                                    </div>
+                                </div>
+                                <div class="article_container_main_body">
+                                    <div class="article_container_main_body_image"></div>
+                                    <div class="article_container_main_body_content">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus luctus bibendum tristique. Donec vestibulum vitae turpis vel egestas. Integer commodo, nulla id sollicitudin posuere, sapien dui pretium tortor, vel blandit dolor orci sed dolor. Nunc dolor nisi, pharetra at consequat at, hendrerit at tellus...
+                                        <span class="article_container_main_lead_more"><a href="">Load More...</a></span></p>
+                                    </div>
+                                    <div class="article_container_main_footer">
+                                        <a href="#"><div class="article_container_main_footer_facebook"></div></a>
+                                        <a href="#"><div class="article_container_main_footer_twitter"></div></a>
+                                        <a href="#"><div class="article_container_main_footer_googleplus"></div></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!--ARTICLE SECTION ENDS-->
+                    
+                    <!--HIGHLIGHTS SECTION STARTS-->
+                    
+                    
+                    <div class="highlights_container" style="display:none;">
+                        <div class="hightlights_self">
+                            <div class="highlights_self_title">Highlights</div>
+                            <div class="highlights_self_content">
+                                <ul>
+                                    <li class="highlight_self_line">Lorem ipsum dolor sit amet, vix case erat complectitur ut. Vis at semper omnium argumentum.</li>
+                                    <li class="highlight_self_line">Lorem ipsum dolor sit amet, vix case erat complectitur ut. Vis at semper omnium argumentum.</li>
+                                    <li class="highlight_self_line">Lorem ipsum dolor sit amet, vix case erat complectitur ut. Vis at semper omnium argumentum.</li>
+                                    <li class="highlight_self_line">Lorem ipsum dolor sit amet, vix case erat complectitur ut. Vis at semper omnium argumentum.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="hightlights_by_others">
+                            <div class="highlights_by_others_title">Highlights By Others</div>
+                            <div class="highlights_by_others_content">
+                                <ul>
+                                    <li class="highlight_by_others_line">Lorem ipsum dolor sit amet, vix case erat complectitur ut. Vis at semper omnium argumentum.</li>
+                                    <li class="highlight_by_others_line">Lorem ipsum dolor sit amet, vix case erat complectitur ut. Vis at semper omnium argumentum.</li>
+                                    <li class="highlight_by_others_line">Lorem ipsum dolor sit amet, vix case erat complectitur ut. Vis at semper omnium argumentum.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <!--HIGHLIGHTS SECTION ENDS-->
+                    
+                    <!--QUESTIONS SECTION STARTS-->
+                    
+                    <div class="questions_container" style="display: none;">
+                        <div class="question_container_single">
+<!--                            <div class="question_container_single_q">Q.</div>-->
+                            <div class="question_container_single_content">Q. Lorem ipsum dolor sit amet, vix case erat complectitur ut. Vis at semper omnium argumentum. Lorem ipsum dolor sit amet, vix case erat complectitur ut. Vis at semper omnium argumentum. Lorem ipsum dolor sit amet, vix case erat complectitur ut. Vis at semper omnium argumentum.Lorem ipsum dolor sit amet, vix case erat complectitur ut. Vis at semper omnium argumentum. Lorem ipsum dolor sit amet, vix case erat complectitur ut. Vis at semper omnium argumentum?</div>
+                            <div class="question_container_single_footer">
+                                <div class="question_container_single_footer_from">In article 'Lorem ipsum dolor sit amet, vix case'</div>
+                                <div class="question_container_single_footer_date">(3 days ago)</div>
+                            </div>
+                        </div>
+                        <div class="question_container_single">
+                            <div class="question_container_single_content">Q. Lorem ipsum dolor sit amet, vix case erat complectitur ut. Vis at semper omnium argumentum. Lorem ipsum dolor sit amet, vix case erat complectitur ut. Vis at semper omnium argumentum. Lorem ipsum dolor sit amet, vix case erat complectitur ut. Lorem ipsum dolor sit amet, vix case erat complectitur ut. Vis at semper omnium argumentum?</div>
+                            <div class="question_container_single_footer">
+                                <div class="question_container_single_footer_from">In article 'Lorem ipsum dolor sit amet, vix case'</div>
+                                <div class="question_container_single_footer_date">(3 days ago)</div>
+                            </div>
+                        </div>
+                        <div class="question_container_single">
+                            <div class="question_container_single_content">Q. Lorem ipsum dolor sit amet, vix case erat complectitur ut. Vis at semper omnium argumentum. Lorem ipsum dolor sit amet, vix case erat complectitur ut. Vis at semper omnium argumentum. Lorem ipsum dolor sit amet, vix case erat complectitur ut. Vis at semper omnium argumentum.Lorem ipsum dolor sit amet, vix case erat complectitur ut. Vis at semper omnium argumentum. Lorem ipsum dolor sit amet, vix case erat complectitur ut. Vis at semper omnium argumentum. Vis at semper omnium argumentum.Lorem ipsum dolor sit amet, vix case erat complectitur ut. Vis at semper omnium argumentum?</div>
+                            <div class="question_container_single_footer">
+                                <div class="question_container_single_footer_from">In article 'Lorem ipsum dolor sit amet, vix case'</div>
+                                <div class="question_container_single_footer_date">(3 days ago)</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!--QUESTIONS SECTION ENDS-->
+                    
+                    <!--ANSWERS SECTION STARTS-->
+                    
+                    <div class="answers_container" style="display: none;">
+                        <div class="answers_container_single">
+                            <div class="answers_container_single_question_header">Question:</div>
+                            <div class="answers_container_single_question_content">Lorem ipsum dolor sit amet, vix case erat complectitur ut. Vis at semper omnium argumentum. Lorem ipsum dolor sit amet, vix case erat complectitur ut. Vis at semper omnium argumentum. Lorem ipsum dolor sit amet, vix case erat complectitur ut. Vis at semper omnium argumentum.Lorem ipsum dolor sit amet, vix case erat complectitur ut. Vis at semper omnium argumentum. Lorem ipsum dolor sit amet, vix case erat complectitur ut. Vis at semper omnium argumentum?</div>
+                            <div class="answers_container_answer_question_header">XYZ's Answer:</div>
+                            <div class="answers_container_answer_question_content">Lorem ipsum dolor sit amet, vix case erat complectitur ut. Vis at semper omnium argumentum. Lorem ipsum dolor sit amet, vix case erat complectitur ut. Vis at semper omnium argumentum. Lorem ipsum dolor sit amet, vix case erat complectitur ut. Vis at semper omnium argumentum.Lorem ipsum dolor sit amet, vix case erat complectitur ut.</div>
+                            <div class="answer_container_single_footer">
+                                <div class="answer_container_single_footer_from">In article 'Lorem ipsum dolor sit amet, vix case'</div>
+                                <div class="answer_container_single_footer_date">(3 days ago)</div>
+                            </div>
+                        </div>
+                        <div class="answers_container_single">
+                            <div class="answers_container_single_question_header">Question:</div>
+                            <div class="answers_container_single_question_content">Lorem ipsum dolor sit amet, vix case erat complectitur ut. Vis at semper omnium argumentum. Lorem ipsum dolor sit amet, vix case erat complectitur ut. Vis at semper omnium argumentum. Lorem ipsum dolor sit amet, vix case erat complectitur ut. Vis at semper omnium argumentum.Lorem ipsum dolor sit amet, vix case erat complectitur ut. Vis at semper omnium argumentum. Lorem ipsum dolor sit amet, vix case erat complectitur ut. Vis at semper omnium argumentum?</div>
+                            <div class="answers_container_answer_question_header">XYZ's Answer:</div>
+                            <div class="answers_container_answer_question_content">Lorem ipsum dolor sit amet, vix case erat complectitur ut. Vis at semper omnium argumentum. Lorem ipsum dolor sit amet, vix case erat complectitur ut. Vis at semper omnium argumentum. Lorem ipsum dolor sit amet, vix case erat complectitur ut. Vis at semper omnium argumentum.Lorem ipsum dolor sit amet, vix case erat complectitur ut.</div>
+                            <div class="answer_container_single_footer">
+                                <div class="answer_container_single_footer_from">In article 'Lorem ipsum dolor sit amet, vix case'</div>
+                                <div class="answer_container_single_footer_date">(3 days ago)</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!--ANSWERS SECTION ENDS-->
+                    
+                    
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!--REST OF BODY ENDS-->
+    
+</body>
+</html>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    

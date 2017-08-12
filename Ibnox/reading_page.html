@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+	   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	   <title>Ibnox| Reading</title>
+	   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	   <link rel="shortcut icon" type="image/x-icon" href="Icons/Logo.jpg">
+	   <!--[if lt IE 9]>
+	   <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	   <![endif]-->
+        <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>-->
+        <script src="script.js"></script>
+	   <link rel="stylesheet" href="styles.css" type="text/css" media="all">
+        <link rel="stylesheet" href="styles_navbar.css" type="text/css" media="all">
+        <link rel="stylesheet" href="reading_page.css" type="text/css" media="all">
+        <script src="reading_page_scripts.js"></script>
+    </head>
+    <body>
+        <!--NAVIGATION BAR STARTS-->
+    <header class="navbar">
+        <div class="navbar_content">
+            <div class="navbar_content_left2">
+                <img class="logo" src="Icons/Logo_25px.jpg">
+                <div class="searchbar" tabindex="0">
+                    <input class="searchbar_term2" autocomplete="off" value type="text" placeholder="Search Ibnox" title="Search"/>
+                </div>
+                <div class="navbar_buttons">
+                    <ul class="navbar_buttons_list">
+                        <li class="navbar_button_StartWriting" onclick="questionAnswerDisplay()"><div class="navbar_button_link" href="#">Question &amp; Answer</div></li>
+                        <li class="navbar_button_Draft"  onclick="highlightDisplay()"><div class="navbar_button_link">Highlights</div></li>
+                    </ul>
+                </div>
+            </div>
+        <div class="dropdown_container">
+            <div class="navbar_right_icons">
+                <div class= "message_full">
+                    <img class="message_icon" src="Icons/message_icon_25by27.jpg" onclick="toggleDivMessageDropdown()">
+                </div>
+                <div class="notification_full">
+                    <img class="notification_icon" src="Icons/notification_icon_25by24.jpg" onclick="toggleDivNotificationDropdown()">
+                </div>
+                <div class="profile_link">
+                    <img class="profile_icon" id="image3" src="Icons/profile_icon_temp_37by25.jpg" onclick="toggleDivUserMenu()">
+                    <img class="profile_arrow" src="Icons/arrow_icon_6by4px.jpg" onclick="toggleDivUserMenu()">
+                </div>
+            </div>
+            
+            <!--USER DROPDOWN MENU STARTS-->
+            
+            <div class="user_menu" id="menu_user" style="display: none;">
+                    <div class="user_menu_header">
+                        <div class="user_menu_profile_pic"></div>
+                        <div class="user_menu_name">Name of Writer</div>
+                    </div>
+                    <div class="user_menu_body">
+                        <div class="user_menu_body_line1">
+                        <a href="#"><div class="user_menu_option_Published"></div></a>
+                        <a href="#"><div class="user_menu_option_Drafts"></div></a>
+                        </div>
+                        <br>
+                        <div class="user_menu_body_line2">
+                        <a href="#"><div class="user_menu_option_Analytics"></div></a>
+                        <a href="#"><div class="user_menu_option_Settings"></div></a>
+                        </div>
+                    </div>
+                    <div class="user_menu_footer">
+                        <div class="user_menu_footer_line1">
+                            <ul class="user_menu_footer_links">
+                                <li class="user_menu_footer_link_single"><a href="#">Logout</a></li>
+                                <li class="user_menu_footer_link_single"><a href="#">Contact Us</a></li>
+                                <li class="user_menu_footer_link_single"><a href="#">Career</a></li>
+                                <li class="user_menu_footer_link_single"><a href="#">Guidelines</a></li>
+                                <li class="user_menu_footer_link_single"><a href="#">Privacy</a></li>
+                            </ul>
+                        </div>
+                        <div class="user_menu_footer_line2">
+                            <ul class="user_menu_footer_links">
+                                <li class="user_menu_footer_link_single"><a href="#">About</a></li>
+                                <li class="user_menu_footer_link_single"><a href="#">Report A Bug</a></li>
+                                <li class="user_menu_footer_link_single"><a href="#">Terms Of Use</a></li>
+                                <li class="user_menu_footer_link_single"><a href="#">Disclosure</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--USER DROPDOWN MENU ENDS-->
+            
+                <!--MESSAGE DROPDOWN MENU STARTS-->
+                <div class="message_dropdown" id="dropdown_message" style="display: none;">
+                    
+                        <div class="message_dropdown_before" id="message_flip_state1">
+                        <div class="message_dropdown_header">
+                        <div class="message_dropdown_header_title">Messages</div>
+                        <div class="message_dropdown_header_searchbar">
+                            <input class="searchbar_term_author" autocomplete="off" value type="text" placeholder="Search Author" title="Search"/>
+                        </div>
+                        <!--<div class="message_dropdown_header_searchbar_onclick">
+                            <input class="searchbar_term_author_onclick" autocomplete="off" value type="text" placeholder="Search Author" title="Search"/>
+                        </div>-->
+                    </div>
+                    <div class="message_dropdown_body">
+                        <div class="message_dropdown_notif1" onclick="messageFlip()">
+                            <div class="message_dropdown_profile_pic"></div>
+                            <div class="message_dropdown_name">Neel Shah</div>
+                            <!--<div class="message_dropdown_author_tag">Author</div>-->
+                            <div class="message_dropdown_notification_quantity">1</div>
+                        </div>
+                        <div class="message_dropdown_notif1" onclick="messageFlip()">
+                            <div class="message_dropdown_profile_pic"></div>
+                            <div class="message_dropdown_name">Neel Shah</div>
+                            <!--<div class="message_dropdown_author_tag">Author</div>-->
+                            <div class="message_dropdown_notification_quantity">1</div>
+                        </div>
+                        <div class="message_dropdown_notif1" onclick="messageFlip()">
+                            <div class="message_dropdown_profile_pic"></div>
+                            <div class="message_dropdown_name">Neel Shah</div>
+                            <!--<div class="message_dropdown_author_tag">Author</div>-->
+                            <div class="message_dropdown_notification_quantity">1</div>
+                        </div>
+                        
+                        <!--<div class="message_dropdown_notif2" onclick="messageFlip()">
+                            <div class="message_dropdown_profile_pic"></div>
+                            <div class="message_dropdown_name">Neel Shah</div>
+                            <div class="message_dropdown_unread">2</div>
+                        </div>
+                        <div class="message_dropdown_notif2" onclick="messageFlip()">
+                            <div class="message_dropdown_profile_pic"></div>
+                            <div class="message_dropdown_name">Neel Shah</div>
+                            <div class="message_dropdown_unread">2</div>
+                        </div>
+                        <div class="message_dropdown_notif1" onclick="messageFlip()">
+                            <div class="message_dropdown_profile_pic"></div>
+                            <div class="message_dropdown_name">Neel Shah</div>
+                            <div class="message_dropdown_author_tag">Author</div>
+                        </div>-->
+                    </div>
+                    </div>
+                    <div class="message_dropdown_after" id="message_flip_state2">
+                        <div class="message_dropdown_after_header">
+                            <img class="message_dropdown_after_header_arrow" src="Icons/Arrow_left_icon_21by14px.jpg" onclick="messageFlipBack()">
+                            <div class="message_dropdown_after_title">Name</div>
+                        </div>
+                        <div class="message_dropdown_after_body">
+                            <ul class="text_messages_list">
+                            <li class="text_line_left"><div class="message_dropdown_text_other_top">Phasellus luctus bibendum tristique.</div></li>
+                            <li class="text_line_left"><div class="message_dropdown_text_other_middle">Blah</div></li>
+                            <li class="text_line_left"><div class="message_dropdown_text_other_bottom">Blah blah blah </div></li>
+                            <li class="text_line_right"><div class="message_dropdown_text_me_top">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div></li>
+                            <li class="text_line_right"><div class="message_dropdown_text_me_middle">Blah</div></li>
+                            <li class="text_line_right"><div class="message_dropdown_text_me_bottom">Blah blah blah</div></li>
+                            </ul>
+                        </div>
+                        <div class="message_dropdown_after_footer">
+                            <textarea class="message_dropdown_after_type" autocomplete="off" value type="text" placeholder="Enter your message" title="Search"></textarea>
+                            <div class="message_dropdown_after_footer_bottom">
+                                <div class="message_dropdown_send_button">Send</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--MESSAGE DROPDOWN MENU ENDS-->
+            
+                <!--NOTIFICATION DROPDOWN MENU STARTS-->
+                <div class="notification_dropdown" id="dropdown_notification" style="display: none;">
+                    <div class="notification_dropdown_header">Notifications</div>
+                    <div class="notification_dropdown_body">
+                        <div class="notification_dropdown_notif">
+                            <div class="notification_dropdown_notif_pic"></div>
+                            <div class="notification_dropdown_notif_content">Blah blah blah blah blah blah blah blah blah</div>
+                            <div class="notification_dropdown_notif_time">2 mins ago</div>
+                        </div>
+                        <div class="notification_dropdown_notif">
+                            <div class="notification_dropdown_notif_pic"></div>
+                            <div class="notification_dropdown_notif_content">Blah blah blah blah blah blah blah blah blah</div>
+                            <div class="notification_dropdown_notif_time">2 mins ago</div>
+                        </div>
+                        <div class="notification_dropdown_notif">
+                            <div class="notification_dropdown_notif_pic"></div>
+                            <div class="notification_dropdown_notif_content">Blah blah blah blah blah blah blah blah blah</div>
+                            <div class="notification_dropdown_notif_time">2 mins ago</div>
+                        </div>
+                        <div class="notification_dropdown_notif">
+                            <div class="notification_dropdown_notif_pic"></div>
+                            <div class="notification_dropdown_notif_content">Blah blah blah blah blah blah blah blah blah</div>
+                            <div class="notification_dropdown_notif_time">2 mins ago</div>
+                        </div>
+                        <div class="notification_dropdown_notif">
+                            <div class="notification_dropdown_notif_pic"></div>
+                            <div class="notification_dropdown_notif_content">Blah blah blah blah blah blah blah blah blah</div>
+                            <div class="notification_dropdown_notif_time">2 mins ago</div>
+                        </div>
+                        <div class="notification_dropdown_notif">
+                            <div class="notification_dropdown_notif_pic"></div>
+                            <div class="notification_dropdown_notif_content">Blah blah blah blah blah blah blah blah blah</div>
+                            <div class="notification_dropdown_notif_time">2 mins ago</div>
+                        </div>
+                    </div>
+                </div>
+                <!--NOTIFICATION DROPDOWN MENU ENDS-->
+            </div>
+        </div>
+    </header>
+    
+    <!--NAVIGATION BAR ENDS-->
+    
+    <!--REST OF BODY STARTS-->
+        
+        <div class="rest_of_body" onclick="restOfBody()">
+            <div class="body_content_main">
+                <div class="article_container_main">
+                    
+                        <pre class="article_container_main_content">
+                            Sifting through my Camera Roll
+
+                            thousands of images not posted online
+
+                            I hunt through my library
+
+                            see the outtakes
+
+                            and rejects of my days
+
+                            the stuff I’d felt wasn’t good enough to share
+
+                            yet these are the photos
+
+                            unshared, unfiltered
+
+                            that really tell my stories
+                        </pre>
+                    
+                </div>
+                <div class="author_container">
+                    <div class="author_container_left">
+                        <div class="author_container_left_profile_pic"></div>
+                    </div>
+                    <!--<div class="author_container_right">-->
+                        <div class="author_container_right_title">Author</div>
+                        <div class="author_container_right_bio">Lorem ipsum dolor sit amet, an case harum complectitur sea. Veniam debitis an sed, dolor omnesque ad vis, quis minimum.</div>
+                    <!--</div>-->
+                </div>
+                
+                <div class="suggestions_container">
+                    <div class="suggestions_container_title">Suggestions</div>
+                    <div class="suggestions_slideshow_arrow_left" onclick="moveRight()"></div>
+                    <div class="suggestions_container_slideshow">
+                        
+                        <div class="suggestions_slideshow_card">
+                            <div class="suggestions_slideshow_card_pic"></div>
+                            <div class="suggestions_slideshow_card_topic"><strong>Dolor sit amet, movet vocibus mediocritatem mei no, vis debet insolens no, at.</strong></div>
+                            <div class="suggestions_slideshow_card_footer">
+                                <div class="suggestions_slideshow_card_footer_date">3 days ago</div>
+                                <div class="suggestions_slideshow_card_footer_size">2 mins read</div>
+                            </div>
+                        </div>
+                        <div class="suggestions_slideshow_card">
+                            <div class="suggestions_slideshow_card_pic"></div>
+                            <div class="suggestions_slideshow_card_topic"><strong>Dolor sit amet, dicta euismod te vis, nec et dicta moderatius. Pri nostrud.</strong></div>
+                            <div class="suggestions_slideshow_card_footer">
+                                <div class="suggestions_slideshow_card_footer_date">2 days ago</div>
+                                <div class="suggestions_slideshow_card_footer_size">2 mins read</div>
+                            </div>
+                        </div>
+                        <div class="suggestions_slideshow_card">
+                            <div class="suggestions_slideshow_card_pic"></div>
+                            <div class="suggestions_slideshow_card_topic"><strong>Dolor sit amet, vidit propriae prodesset mea no, graeco voluptatibus no ius reque.</strong></div>
+                            <div class="suggestions_slideshow_card_footer">
+                                <div class="suggestions_slideshow_card_footer_date">2 days ago</div>
+                                <div class="suggestions_slideshow_card_footer_size">2 mins read</div>
+                            </div>
+                        </div>
+                        <div class="suggestions_slideshow_card">
+                            <div class="suggestions_slideshow_card_pic"></div>
+                            <div class="suggestions_slideshow_card_topic"><strong>Dolor sit amet, movet vocibus mediocritatem mei no, vis debet insolens no, at.</strong></div>
+                            <div class="suggestions_slideshow_card_footer">
+                                <div class="suggestions_slideshow_card_footer_date">2 days ago</div>
+                                <div class="suggestions_slideshow_card_footer_size">2 mins read</div>
+                            </div>
+                        </div>
+                        <div class="suggestions_slideshow_card">
+                            <div class="suggestions_slideshow_card_pic"></div>
+                            <div class="suggestions_slideshow_card_topic"><strong>Dolor sit amet, dicta euismod te vis, nec et dicta moderatius. Pri nostrud.</strong></div>
+                            <div class="suggestions_slideshow_card_footer">
+                                <div class="suggestions_slideshow_card_footer_date">2 days ago</div>
+                                <div class="suggestions_slideshow_card_footer_size">2 mins read</div>
+                            </div>
+                        </div>
+                        <div class="suggestions_slideshow_card">
+                            <div class="suggestions_slideshow_card_pic"></div>
+                            <div class="suggestions_slideshow_card_topic"><strong>Dolor sit amet, movet vocibus mediocritatem mei no, vis debet insolens no, at.</strong></div>
+                            <div class="suggestions_slideshow_card_footer">
+                                <div class="suggestions_slideshow_card_footer_date">2 days ago</div>
+                                <div class="suggestions_slideshow_card_footer_size">2 mins read</div>
+                            </div>
+                        </div>
+                        <div class="suggestions_slideshow_card">
+                            <div class="suggestions_slideshow_card_pic"></div>
+                            <div class="suggestions_slideshow_card_topic"><strong>Dolor sit amet, movet vocibus mediocritatem mei no, vis debet insolens no, at.</strong></div>
+                            <div class="suggestions_slideshow_card_footer">
+                                <div class="suggestions_slideshow_card_footer_date">2 days ago</div>
+                                <div class="suggestions_slideshow_card_footer_size">2 mins read</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="suggestions_slideshow_arrow_right" onclick="moveLeft()"></div>
+                </div>
+                
+                <div class="more_by_author_container">
+                    <div class="more_by_author_title"><h3>More artices by author</h3></div>
+                    <div class="more_by_author_arrow_left" onclick="moveRight2()"></div>
+                    <div class="more_by_author_slideshow">
+                        
+                        <div class="more_by_author_slideshow_card">
+                            <div class="more_by_author_slideshow_card_pic"></div>
+                            <div class="more_by_author_slideshow_card_topic"><strong>Dolor sit amet, movet vocibus mediocritatem mei no, vis debet insolens no, at.</strong></div>
+                            <div class="more_by_author_slideshow_card_footer">
+                                <div class="more_by_author_slideshow_card_footer_date">3 days ago</div>
+                                <div class="more_by_author_slideshow_card_footer_size">2 mins read</div>
+                            </div>
+                        </div>
+                        <div class="more_by_author_slideshow_card">
+                            <div class="more_by_author_slideshow_card_pic"></div>
+                            <div class="more_by_author_slideshow_card_topic"><strong>Dolor sit amet, dicta euismod te vis, nec et dicta moderatius. Pri nostrud.</strong></div>
+                            <div class="more_by_author_slideshow_card_footer">
+                                <div class="more_by_author_slideshow_card_footer_date">2 days ago</div>
+                                <div class="more_by_author_slideshow_card_footer_size">2 mins read</div>
+                            </div>
+                        </div>
+                        <div class="more_by_author_slideshow_card">
+                            <div class="more_by_author_slideshow_card_pic"></div>
+                            <div class="more_by_author_slideshow_card_topic"><strong>Dolor sit amet, movet vocibus mediocritatem mei no, vis debet insolens no, at.</strong></div>
+                            <div class="more_by_author_slideshow_card_footer">
+                                <div class="more_by_author_slideshow_card_footer_date">2 days ago</div>
+                                <div class="more_by_author_slideshow_card_footer_size">2 mins read</div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="more_by_author_arrow_right" onclick="moveLeft2()"></div>
+                </div>
+                
+                
+                <div class="discussion_container">
+                    <div class="discussion_container_title">3 Discussions</div>
+                    <div class="discussion_container_single">
+                    <div class="discussion_container_left">
+                        <div class="discussion_container_left_profile_pic"></div>
+                    </div>
+                    <!--<div class="author_container_right">-->
+                        <div class="discussion_container_right_title">User's Name</div>
+                        <div class="discussion_container_right_time">3 days ago</div>
+                        <div class="discussion_container_right_comment">Lorem ipsum dolor sit amet, vix case erat complectitur ut. Vis at semper omnium argumentum.</div>
+                    </div>
+                    <div class="discussion_container_single">
+                    <div class="discussion_container_left">
+                        <div class="discussion_container_left_profile_pic"></div>
+                    </div>
+                    <!--<div class="author_container_right">-->
+                        <div class="discussion_container_right_title">User's Name</div>
+                        <div class="discussion_container_right_time">3 days ago</div>
+                        <div class="discussion_container_right_comment">Lorem ipsum dolor sit amet, vix case erat complectitur ut. Vis at semper omnium argumentum.</div>
+                    </div>
+                    <div class="discussion_container_reply">
+                        <textarea class="discussion_container_reply_type"  name="Text1" placeholder="ENTER YOUR COMMENT" ></textarea>
+                        <div class="discussion_container_reply_footer">
+                            <div class="discussion_container_reply_submit">SUBMIT COMMENT</div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+            </div>
+            
+            
+        </div>
+        
+        <div class="highlight_overlay" style="display:none"  onclick="highlightHide()">
+        
+        </div>
+        <div class="highlights_container_center">
+        <div class="highlights_container" style="display:none">
+                    <div class="hightlights_self">
+<!--                        <div class="highlight_close" >[X]</div>-->
+                        <div class="highlights_self_title">Highlights</div>
+                        <div class="highlights_self_content">
+                            <div class="highlight_self_line">Lorem ipsum dolor sit amet, vix case erat complectitur ut. Vis at semper omnium argumentum.</div>
+                            <div class="highlight_self_line">Lorem ipsum dolor sit amet, vix case erat complectitur ut. Vis at semper omnium argumentum.</div>
+                            <div class="highlight_self_line">Lorem ipsum dolor sit amet, vix case erat complectitur ut. Vis at semper omnium argumentum.</div>
+                            <div class="highlight_self_line">Lorem ipsum dolor sit amet, vix case erat complectitur ut. Vis at semper omnium argumentum.</div>
+                            
+                        </div>
+                    </div>
+                    <div class="hightlights_by_others">
+                        <div class="highlights_by_others_title">Highlights By Others</div>
+                        <div class="highlights_by_others_content">
+                            <div class="highlight_by_others_line">Lorem ipsum dolor sit amet, vix case erat complectitur ut. Vis at semper omnium argumentum.</div>
+                            <div class="highlight_by_others_line">Lorem ipsum dolor sit amet, vix case erat complectitur ut. Vis at semper omnium argumentum.</div>
+                            <div class="highlight_self_line">Lorem ipsum dolor sit amet, vix case erat complectitur ut. Vis at semper omnium argumentum.</div>
+                            
+                        </div>
+                    </div>
+            </div>
+        </div>
+        
+        
+        
+        <div class="question_answer_container1"  style="display:none">
+<!--            <div class="question_answer_container_close2" onclick="closeQuestionAnswer1()">[X]</div>-->
+            <div class="question_answer_container_title1">QUESTIONS</div>
+            <div class="questions_single" onclick="displayQuestionAnswer2()">
+                <div class="questions_single_header">
+                    <div class="questions_single_asker">WRITER'S NAME ASKED</div>
+                    <div class="questions_single_numberofanswer">0 Answers</div>
+                </div>
+                <div class="questions_single_content">Lorem ipsum dolor sit amet, vix case erat complectitur ut. Vis at semper omnium argumentum.</div>
+                <div class="questions_single_footer">
+                    <a href="#"><div class="questions_single_footer_upvotes">Upvote</div></a>
+                    <a href="#"><div class="questions_single_footer_downvotes">Downvote</div></a>
+                    <a href="#"><div class="questions_single_footer_edit">Edit Question</div></a>
+                    <div class="questions_single_footer_time">Just Now</div>
+                </div>
+            </div>
+            <div class="questions_single" onclick="displayQuestionAnswer2()">
+                <div class="questions_single_header">
+                    <div class="questions_single_asker">WRITER'S NAME ASKED</div>
+                    <div class="questions_single_numberofanswer">0 Answers</div>
+                </div>
+                <div class="questions_single_content">Lorem ipsum dolor sit amet, vix case erat complectitur ut. Vis at semper omnium argumentum.</div>
+                <div class="questions_single_footer">
+                    <a href="#"><div class="questions_single_footer_upvotes">Upvote</div></a>
+                    <a href="#"><div class="questions_single_footer_downvotes">Downvote</div></a>
+                    <a href="#"><div class="questions_single_footer_edit">Edit Question</div></a>
+                    <div class="questions_single_footer_time">Just Now</div>
+                </div>
+            </div>
+            
+            <div class="question_writing_container">
+                <textarea class="question_writing_container_type"  name="Text1" placeholder="ENTER YOUR QUESTION" ></textarea>
+                <div class="question_writing_container_footer">
+                    <div class="question_writing_container_submit">SUBMIT QUESTION</div>
+                </div>
+                <div class="question_writing_container_error hd"  >ERROR</div>
+            </div>
+        </div>
+        
+        
+        <div class="question_answer_container2" style="display: none" >
+<!--            <div class="question_answer_container_close2" onclick="closeQuestionAnswer2()">[X]</div>-->
+            <div class="question_answer_container_title2" onclick="backToQuestionDisplay()">BACK TO QUESTIONS</div>
+            <div class="questions_single">
+                <div class="questions_single_header">
+                    <div class="questions_single_asker">WRITER'S NAME ASKED</div>
+                    <div class="questions_single_numberofanswer">0 Answers</div>
+                </div>
+                <div class="questions_single_content">Lorem ipsum dolor sit amet, vix case erat complectitur ut. Vis at semper omnium argumentum.</div>
+                <div class="questions_single_footer">
+                    <a href="#"><div class="questions_single_footer_upvotes">Upvote</div></a>
+                    <a href="#"><div class="questions_single_footer_downvotes">Downvote</div></a>
+                    <a href="#"><div class="questions_single_footer_edit">Edit Question</div></a>
+                    <div class="questions_single_footer_time">Just Now</div>
+                </div>
+            </div>
+            <div class="answers_single">
+                <div class="answers_single_header">
+                    <div class="answers_single_answerer">WRITER'S NAME ANSWERED</div>
+                </div>
+                <div class="answers_single_content">Lorem ipsum dolor sit amet, vix case erat complectitur ut. Vis at semper omnium argumentum.</div>
+                <div class="answers_single_footer">
+                    <a href="#"><div class="answers_single_footer_upvotes">Upvote</div></a>
+                    <a href="#"><div class="answers_single_footer_downvotes">Downvote</div></a>
+                    <a href="#"><div class="answers_single_footer_edit">Edit Question</div></a>
+                    <div class="answers_single_footer_time">Just Now</div>
+                </div>
+            </div>
+            
+            <div class="answers_writing_container">
+                <textarea class="answers_writing_container_type"  name="Text1" placeholder="ENTER YOUR ANSWER" ></textarea>
+                <div class="answers_writing_container_footer">
+                    <div class="answers_writing_container_submit">SUBMIT ANSWER</div>
+                </div>
+                <div class="answer_writing_container_error hd"  >ERROR</div>
+            </div>
+        </div>
+        
+    </body>
